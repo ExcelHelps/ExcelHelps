@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+
+<html>
+
+<link rel="stylesheet" href="EHW_css.css">
+
+<header>
+<div class="contain1">
+    <div id="lefthead" class="head1"> <h4 class="SMhead"> Youtube Channel Link  </h4>
+      <a href="https://www.youtube.com/@ExcelHelps" target="_blank">  <img id="yticon" src="yt icon.jpeg" alt=""> </a>
+    </div>
+
+     <div id="banner" >
+        <img src="WebsiteBanner.png" alt="" width="800px" height="200px">
+    </div> 
+
+    <div id="righthead" class="head1"> <h4 class="SMhead"> TikTok Channel Link </h4>
+        <a href="https://www.tiktok.com/@excelhelps1" target="_blank"> <img id="tiktok" src="tiktok 1.jpg" alt=""> </a> 
+    </div> 
+</div>            
+</header>
+<body>
+<div class="contain2">
+
+    <div class="body1"> <H1> Excel </H1> 
+    <p><b>Excel Practice Datasets</b></p> 
+    <li><a href="CarData.xlsx"> Car Data Excel File </a> <br>Included are 399 rows / 9 columns </li> <br>
+    <li><a href="realtorData.xlsx"> Realtor Data File </a> <br>Included are 100,001 rows / 10 columns </li> <br>
+    <li><a href="Walmart Sales Data.xlsx"> Walmart Sales Data File </a> <br>Included are 6,436 rows / 8 columns </li> <br>
+    <li><a href="Salary Data.xlsx"> Salary Data File </a> <br>Included are 6,705 rows / 6 columns </li> <br>
+    <li><a href="Product Sales Data.xlsx"> Product Sales Data File </a> <br>Included are 9,801 rows / 18 columns </li> <br>
+    </div>
+
+    <div class="body1">
+        <H1> Resources for Learning to Code </H1>
+        <li><a href="https://www.freecodecamp.org/">FreeCodeCamp</a> 
+            <br> Start with basics to coding and work into <br> more complex ideas and projects. Great structure for a beginner. </li><br>
+        <li><a href="https://www.coursera.org/google-career-certificates/">Google Certificates / Coursera</a> 
+            <br> Great for breaking into new career, will cost <br> money to take courses and gain a certificate </li><br>
+        <li><a href="https://learn.microsoft.com/en-us/certifications/">Microsoft Certifications</a> 
+            <br> Also an amazing tool for breaking into a new career, will cost <br> money for cerification test. But, most courses are free <br> and contain a ton of useful insight. </li><br>
+        <li><a href="https://www.khanacademy.org/">Khan Academy</a> 
+            <br> Useful for learning other topics such as Math, Economics, <br> and Science for all ages. Can learn the basics <br> of computer programming with HTML/CSS/JavaScript for free. </li><br>
+        <li><a href="https://codemy.com/">Codemy</a> 
+            <br> Offers so many different courses, will have to pay for each course. <br> Useful if you are serious about learning in depth code. </li><br>
+       
+    </div>
+
+</div>
+
+</body>

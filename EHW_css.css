@@ -14,7 +14,8 @@ body{
 .contain1{
     display: flex;
     padding-left: 3%;
-    padding-right: 3%;  
+    padding-right: 3%;
+    align-items: center;
 }
 
 #banner{

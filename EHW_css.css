@@ -1,5 +1,7 @@
 header{
     background-color: rgb(197, 229, 202);
+    align-content: center;
+    text-align: center;
 }
 
 body{
@@ -15,7 +17,7 @@ body{
     display: flex;
     padding-left: 3%;
     padding-right: 3%;
-    align-items: center;
+   
 }
 
 #banner{

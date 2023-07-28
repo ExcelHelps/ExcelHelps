@@ -1,0 +1,66 @@
+header{
+    background-color: rgb(197, 229, 202);
+}
+
+body{
+    background-color: rgb(197, 229, 202);
+}
+
+.head1{
+   padding-left: 2%;
+   padding-right: 2%;
+}
+
+.contain1{
+    display: flex;
+    padding-left: 3%;
+    padding-right: 3%;  
+}
+
+#banner{
+    padding-left: 5%;
+    padding-right: 5%;
+    align-self: center;
+}
+
+#lefthead{
+    background-color: rgb(91, 129, 101); 
+     
+}
+
+#righthead{
+    background-color: rgb(91, 129, 101); 
+    display: block;
+}
+
+p{
+    text-align: left;
+}
+#yticon{
+    border-radius: 20%;
+}
+.SMhead{
+    color: aliceblue;
+    box-shadow: inset 15%;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+}
+#tiktok{
+ border-radius: 50%;
+ padding-top: 15%;
+}
+
+.contain2{
+    display: flex;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+}
+.body1{
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgb(175, 195, 175);
+    margin-right: 3%;
+}

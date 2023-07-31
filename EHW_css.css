@@ -6,37 +6,23 @@
     size: 20px;
     margin-left: 5%;
     align-items: baseline;
-
 }
 .banLink{
     color: darkred;
     padding-left: 5%;   
 }
 
-a{
-    text-decoration: none; 
-}
-a:hover {
-    color: rgb(207, 248, 71);
-}
-a:after{
-    color: brown;
-}
-
-header{
-    background-color: rgb(197, 229, 202);
-      
-}
-
-body{
-    background-color: rgb(197, 229, 202);
-}
+a{   text-decoration: none;     }   
+a:hover {   color: rgb(207, 248, 71);   }
+header{     background-color: rgb(197, 229, 202);    }
+body{       background-color: rgb(197, 229, 202);   }
 
 .head1{
    padding-left: 2%;
    padding-right: 2%;
+   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 25px 0 rgba(0, 0, 0, 0.19);
+   border-radius: 2%;
 }
-
 .contain1{
     display: flex;
     padding-left: 5%;
@@ -51,18 +37,14 @@ body{
 }
 
 #lefthead{
-    background-color: rgb(91, 129, 101); 
-     
-}
+    background-color: rgb(91, 129, 101);    }
 
 #righthead{
     background-color: rgb(91, 129, 101); 
     display: block;
 }
 
-#yticon{
-    border-radius: 20%;
-}
+#yticon{    border-radius: 20%; }
 .SMhead{
     color: aliceblue;
     box-shadow: inset 15%;
@@ -88,6 +70,26 @@ body{
     padding-right: 5%;
     background-color: rgb(175, 195, 175);
     margin-right: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1%;
+    
+}
+#botBan{
+    margin-top: 3%;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: 75px;
+    display: flex;
+    margin-left: 5%;
+}
+.CI{
+    padding-left: 5%;
+    padding-top: 2%;
+}
+.TIG{   border-radius: 20%; }
+.socmed{
+    padding-left: 3%;
+    padding-top: 1%;
 }
 
 @media only screen 

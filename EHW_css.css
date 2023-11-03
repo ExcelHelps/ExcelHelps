@@ -37,7 +37,7 @@ body{       background-color: rgb(197, 229, 202);   }
 }
 
 #lefthead{
-    background-color: rgb(91, 129, 101);    }
+    background: linear-gradient(#0F3443, #34E89E)  }
 
 #righthead{
     background-color: rgb(91, 129, 101); 

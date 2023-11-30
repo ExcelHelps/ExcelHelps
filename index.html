@@ -1,111 +1,422 @@
-<!DOCTYPE html> 
-
-<html>
-
-<link rel="stylesheet" href="EHW_css.css">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <div id="webbanner"> <b style="padding-left: 3%;">Navigation Bar</b> <A class="banLink" href="#homep">Home</A>
-        <A class="banLink" href="#PracData">Excel Datasets</A> 
-    <A class="banLink" href="#CodeRes">Coding Resources</A>
-    <A class="banLink" href="#codeEd">Code Editors</A> 
-    <A class="banLink" href="#dbmsL">DBMS/SQL</A> 
- </div> 
- </div>
+
+  <title>Excel Helps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #3e843f;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #3e843f ;
+    font-size: 50px;
+  }
+  .logo {
+    color: #3e843f;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #3e843f ;
+  }
+  .carousel-indicators li {
+    border-color: #3e843f ;
+  }
+  .carousel-indicators li.active {
+    background-color: #3e843f;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #3e843f; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #3e843f ;
+    background-color: #fff !important;
+    color: #3e843f;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #3e843f !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #3e843f;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #3e843f;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #3e843f !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #3e843f;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
 </head>
-<header>
-<div class="contain1" id="homep">
-    <div id="lefthead" class="head1"> <h4 class="SMhead"> Youtube Channel Link  </h4>
-      <a href="https://www.youtube.com/@ExcelHelps" target="_blank">  <img id="yticon" src="yt icon.jpeg" alt=""> </a>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">Resources</a></li>
+        <li><a href="#YTvids">YouTube Videos</a></li>
+        <li><a href="#TTvids">Tiktok Channel</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Excel Helps</h1> 
+  <p>Excel Datasets & Learning Resources</p>
+  
+  
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Why learn Excel?</h2><br>
+      <h4>"There are a whopping 1.1 billion people using Microsoft's Productivity Services, which includes Microsoft Excel. In other words, more than 1 in 8 people on the planet uses Excel. Office users typically spend more than a third of their time using Excel."</h4><br>
+      <p>Excel functions are the most basic coding syntax, and the logical arguments for which they operate is an underlying prinicle of computer programming.</p>
+     
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-random logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-book logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>How to learn</h2><br>
+      <h4><strong>ONLINE FROM HOME:</strong> Although many people get to learn through their university and programs offered through their major, programming or data analysis skills are able to be acquired on your own. </h4><br>
+      <p><strong>WHERE?</strong> That's why i decided to put this webpage together! Below you'll find resources to learn on your own. Whether you are a beginner or expert, you can grow each day by learing new skills.  </p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>Resources</h2>
+  <p>Click icons to view all...</p>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <a href="ExcelDatasets.html"><span class="glyphicon glyphicon-folder-open logo-small"></span></a>
+      <h4>Excel Practice Datasets</h4>
+      <p>Practice datasets for functions or VBA</p>
+    </div>
+    <div class="col-sm-4">
+      <a href="Coding Resources.html"><span class="glyphicon glyphicon-off logo-small"></span></a>
+      <h4>Coding Resources</h4>
+      <p>Resources to Learn / code editors</p>
+    </div>
+    <div class="col-sm-4">
+     <a href="https://www.freecodecamp.org/"> <span class="glyphicon glyphicon-equalizer logo-small"></span></a>
+      <h4>Learn SQL</h4>
+      <p>DBMS / Free SQL courses</p>
+    </div>
+  </div>
+  
+</div>
+
+<!-- Container YT vid section -->
+<div id="YTvids" class="container-fluid text-center bg-grey">
+  <h2>YouTube Videos</h2><br>
+  <h4>Subscribe to follow along!</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_LxaNadtERc?si=VQzOtBpTEXC5lG2q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p><strong>Beginnner's Guide to VBA - Part 1</strong></p>
+       
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mdlQ7uWw-4Q?si=riKW0nn8gC0Tzge7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p><strong>The Gambling Problem in America</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JLX8lCSAD08?si=ISIt6rXMr_DNyTRK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p><strong>Import Excel Spreadsheets into PostgreSQL</strong></p>
+      </div>
+    </div>
+  </div><br><br><br>
+  
+  <h2>Top Comments</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Beating the market sounded like such an impossible task but you are simplyfying things a lot for me. Liked and Subbed!"<br><span>@exploreyourdreamlife</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Thanks, Learning SQL at the moment and I'm using postgresql and this was really helpful. Some more sql, excel and other data analysis tools tutorials will be helpful"<br><span>@bryan1377 </span></h4>
+      </div>
+      <div class="item">
+        <h4>"Thank you. This really helped."<br><span>
+            @franccaroline4873  </span></h4>
+      </div>
     </div>
 
-     <div id="banner" >
-        <img src="WebsiteBanner.png" alt="" width="800px" height="200px">
-    </div> 
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 
-    <div id="righthead" class="head1"> <h4 class="SMhead"> TikTok Channel Link </h4>
-        <a href="https://www.tiktok.com/@excelhelps1" target="_blank"> <img id="tiktok" src="tiktok 1.jpg" alt=""> </a> 
-    </div> 
-</div>            
-</header>
-<body>
-<div class="contain2">
-
-    <div class="body1"> <H1 id="PracData"> Excel </H1> 
-    <p><b>Excel Practice Datasets</b></p> 
-    <li><a href="CarData.xlsx"> Car Data Excel File </a> <br>Included are 399 rows / 9 columns </li> <br>
-    <li><a href="realtorData.xlsx"> Realtor Data File </a> <br>Included are 100,001 rows / 10 columns </li> <br>
-    <li><a href="Walmart Sales Data.xlsx"> Walmart Sales Data File </a> <br>Included are 6,436 rows / 8 columns </li> <br>
-    <li><a href="Salary Data.xlsx"> Salary Data File </a> <br>Included are 6,705 rows / 6 columns </li> <br>
-    <li><a href="Product Sales Data.xlsx"> Product Sales Data File </a> <br>Included are 9,801 rows / 18 columns </li> <br>
-
-    <p><b> Spreadsheets from YouTube videos </b>  </p>
-    <li>  <a href="Col to Row.xlsx"> Convert Columns to Rows & (Rows to Col) </a>                                 </li> <br>
+<!-- Container Tiktok vid section -->
+<div id="TTvids" class="container-fluid text-center bg-grey">
+    <h2>Tiktok Channel</h2><br>
+    <h4>Follow to watch any new short videos released!</h4>
+    <div class="row text-center slideanim">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@excelhelps1/video/7305824751153384747" data-video-id="7305824751153384747" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@excelhelps1" href="https://www.tiktok.com/@excelhelps1?refer=embed">@excelhelps1</a> Win money &#38; Learn Data Science with Kaggle competitions --- Check out my YouTube Channel  https:&#47;&#47;www.youtube.com&#47;@ExcelHelps Check out my Webpage for Practice datasets in Excel and resources for learning how to code!  https:&#47;&#47;excelhelps.github.io&#47;ExcelHelps&#47; Check out my Etsy shop for Premade Financial Spreadsheet templates to save yourself time.  https:&#47;&#47;excelhelps.etsy.com Thanks for Watching! <a title="data" target="_blank" href="https://www.tiktok.com/tag/data?refer=embed">#data</a> <a title="datascience" target="_blank" href="https://www.tiktok.com/tag/datascience?refer=embed">#datascience</a> <a title="dataanalytics" target="_blank" href="https://www.tiktok.com/tag/dataanalytics?refer=embed">#dataanalytics</a> <a title="excel" target="_blank" href="https://www.tiktok.com/tag/excel?refer=embed">#excel</a> <a title="learn" target="_blank" href="https://www.tiktok.com/tag/learn?refer=embed">#learn</a> <a title="winmoney" target="_blank" href="https://www.tiktok.com/tag/winmoney?refer=embed">#winmoney</a> <a title="tiktok" target="_blank" href="https://www.tiktok.com/tag/tiktok?refer=embed">#tiktok</a> <a title="youtube" target="_blank" href="https://www.tiktok.com/tag/youtube?refer=embed">#youtube</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ original sound  - excelhelps1" href="https://www.tiktok.com/music/original-sound-excelhelps1-7305824789862632234?refer=embed">♬ original sound  - excelhelps1</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>     
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+         <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@excelhelps1/video/7284272171537648942" data-video-id="7284272171537648942" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@excelhelps1" href="https://www.tiktok.com/@excelhelps1?refer=embed">@excelhelps1</a> How to add PivotTables and Slicers into your Excel Spreadsheets! --- Check out my YouTube Channel  https:&#47;&#47;www.youtube.com&#47;@ExcelHelps Check out my Webpage for Practice datasets in Excel and resources for learning how to code!  https:&#47;&#47;excelhelps.github.io&#47;ExcelHelps&#47; Check out my Etsy shop for Premade Financial Spreadsheet templates to save yourself time.  https:&#47;&#47;excelhelps.etsy.com Thanks for Watching! <a title="excel" target="_blank" href="https://www.tiktok.com/tag/excel?refer=embed">#excel</a>  <a title="exceltips" target="_blank" href="https://www.tiktok.com/tag/exceltips?refer=embed">#exceltips</a>  <a title="microsoftexcel" target="_blank" href="https://www.tiktok.com/tag/microsoftexcel?refer=embed">#microsoftexcel</a>  <a title="spreadsheet" target="_blank" href="https://www.tiktok.com/tag/spreadsheet?refer=embed">#spreadsheet</a>  <a title="pivottable" target="_blank" href="https://www.tiktok.com/tag/pivottable?refer=embed">#pivottable</a>  <a title="slicer" target="_blank" href="https://www.tiktok.com/tag/slicer?refer=embed">#slicer</a>  <a title="tiktok" target="_blank" href="https://www.tiktok.com/tag/tiktok?refer=embed">#tiktok</a>  <a title="youtube" target="_blank" href="https://www.tiktok.com/tag/youtube?refer=embed">#youtube</a>  <a title="fy" target="_blank" href="https://www.tiktok.com/tag/fy?refer=embed">#fy</a>  <a title="fypシ" target="_blank" href="https://www.tiktok.com/tag/fyp%E3%82%B7?refer=embed">#fypシ</a> <a target="_blank" title="♬ original sound  - excelhelps1" href="https://www.tiktok.com/music/original-sound-excelhelps1-7284272411862747950?refer=embed">♬ original sound  - excelhelps1</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>    
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@excelhelps1/video/7278380380229553451" data-video-id="7278380380229553451" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@excelhelps1" href="https://www.tiktok.com/@excelhelps1?refer=embed">@excelhelps1</a> How to use 3D models in PowerPoint  Check out my YouTube Channel  https:&#47;&#47;www.youtube.com&#47;@ExcelHelps Check out my Webpage for Practice datasets in Excel and resources for learning how to code!  https:&#47;&#47;excelhelps.github.io&#47;ExcelHelps&#47; Check out my Etsy shop for Premade Financial Spreadsheet templates to save yourself time.  https:&#47;&#47;excelhelps.etsy.com Thanks for Watching! <a title="powerpoint" target="_blank" href="https://www.tiktok.com/tag/powerpoint?refer=embed">#PowerPoint</a> <a title="powerpointtutorial" target="_blank" href="https://www.tiktok.com/tag/powerpointtutorial?refer=embed">#powerpointtutorial</a> <a title="mircrosoft" target="_blank" href="https://www.tiktok.com/tag/mircrosoft?refer=embed">#Mircrosoft</a> <a title="microsoftpowerpoint" target="_blank" href="https://www.tiktok.com/tag/microsoftpowerpoint?refer=embed">#microsoftpowerpoint</a> <a title="3dmodels" target="_blank" href="https://www.tiktok.com/tag/3dmodels?refer=embed">#3Dmodels</a> <a title="presentation" target="_blank" href="https://www.tiktok.com/tag/presentation?refer=embed">#presentation</a> <a title="tiktok" target="_blank" href="https://www.tiktok.com/tag/tiktok?refer=embed">#tiktok</a> <a title="youtube" target="_blank" href="https://www.tiktok.com/tag/youtube?refer=embed">#youtube</a> <a title="fy" target="_blank" href="https://www.tiktok.com/tag/fy?refer=embed">#fy</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou?refer=embed">#foryou</a> <a target="_blank" title="♬ original sound  - excelhelps1" href="https://www.tiktok.com/music/original-sound-excelhelps1-7278380479764548394?refer=embed">♬ original sound  - excelhelps1</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+      </div>
+    </div><br><br><br>
     
-    <p><b>Fantasy Football 2023 </b></p> 
-    <li><a href="2023 Fantasy Football Draft Board.xlsx"> 2023 PPR Draft Board </a> </li> <br>  
-     <li><a href="https://docs.google.com/spreadsheets/d/1OKbZ7YON3nDF0M2V4181WP_KpSxXt-FL/copy?usp=sharing&ouid=109310025169975103520&rtpof=true&sd=true">
-         Google Sheets Copy -- 2023 PPR Draft Board </a> </li> <br>  
-    </div>
 
-    <div class="body1">
-        <H1 id="CodeRes"> Resources for Learning to Code </H1>
-        
-        <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a> 
-            <br> Start with basics to coding and work into <br> more complex ideas and projects. Great structure for a beginner. </li><br>
-        <li><a href="https://www.coursera.org/google-career-certificates/" target="_blank">Google Certificates / Coursera</a> 
-            <br> Great for breaking into new career, will cost <br> money to take courses and gain a certificate. </li><br>
-        <li><a href="https://learn.microsoft.com/en-us/certifications/" target="_blank">Microsoft Certifications</a> 
-            <br> Also an amazing tool for breaking into a new career, will cost <br> money for cerification test. But, most courses are free <br> and contain a ton of useful insight. </li><br>
-        <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a> 
-            <br> Useful for learning other topics such as Math, Economics, <br> and Science for all ages. Can learn the basics <br> of computer programming with HTML/CSS/JavaScript for free. </li><br>
-        <li><a href="https://codemy.com/" target="_blank">Codemy</a> 
-            <br> Offers so many different courses, will have to pay for each course. <br> Useful if you are serious about learning in depth code. </li><br>
-        <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a> 
-            <br>If you google a coding question, W3 will pop up a lot <br> of the Time. I use this all the time <br> when i need help piecing together some code. <br> 
-        Stack overflow will also show up for most google questions.  </li><br>
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>Email me with any questions or inquiries! </p>
+      <p>If you are looking for help with Excel or a custom template please reach out.</p>
+      <a href="mailto:exclehelps1@gmail.com"><p><span class="glyphicon glyphicon-envelope"></span> excelhelps1@gmail.com</p></a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
-<div class="contain2">
-    <div class="body1">
-        <h1 id="codeEd">Code Editor Links </h1>
-        <h3>~ Use these to write and test your code ~</h3>
-        <li><a href="https://code.visualstudio.com/" target="_blank"> VS Code </a> <br> Used by professional programmers/companies, <br> all around great choice.
-            <br>  Free to use and my personal favorite. </li> <br>
-        <li><a href="https://brackets.io/" target="_blank"> Brackets </a> <br> Lightweight and simple to use.  <br> Good choice for someone learning to code. 
-             </li><br>        
-    </div>
-
-    <div class="body1">
-        <h1 id="dbmsL"> Database Management <br> Systems for SQL  </h1>
-        <li><a href="https://www.postgresql.org/download/" target="_blank"> PostGreSQL </a> <br> Easy to install and get started, reasonable interface. Completely free. 
-             </li> <br>
-        <li><a href="https://www.mysql.com/downloads/" target="_blank"> MySQL </a> <br> Companies may use MySQL which is ran through Oracle. <br> Free to start, requires you to pay after short period.  
-             </li><br>  
-        <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" target="_blank"> Microsoft SQL server </a> <br> Companies may use this as well. <br> Free to use for personal use, great tool to learn.  
-             </li><br>       
-    </div>
+<!-- Image of location/map -->
 
 
-
-</div>
-
-
-
-</body>
-<footer>
-<div  id="botBan">
-
-    <div class="CI" >
-        <B>Contact me  -</B> <a href="mailto:excehelps1@gmail.com">excelhelps1@gmail.com</a> 
-    </div>
-    <div class="CI" >
-        <B>Other Social Media </b>
-    </div>
-    <div class="socmed"> <a href="https://twitter.com/ExcelHelps1" target="_blank"><img class="TIG" src="twittercion.jpg" alt=""></a> </div>
-    <div class="socmed"> <a href="https://www.instagram.com/excelhelps1/" target="_blank"><img class="TIG" src="Instagramicon.jpg" alt=""></a> </div>
-</div>
+<footer class="container-fluid text-center" style="background-color: #3e843f;">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up" style="color: #f6f6f6;"></span>
+  </a>
 </footer>
 
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
 </html>
